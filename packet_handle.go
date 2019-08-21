@@ -75,7 +75,7 @@ func (packet *PacketStatusRequest) Handle(player *Player) {
 	}
 
 	response := PacketStatusResponse{
-		Response: fmt.Sprintf(`{"version":{"name":"Typhoon","protocol":%d},"players":{"max":%d,"online":%d,"sample":[]},"description":{"text":"%s"},"favicon":"%s","modinfo":{"type":"FML","modList":[]}}`, protocol, max_players, count, JsonEscape(motd), JsonEscape(favicon)),
+		Response: fmt.Sprintf(`{"version":{"name":"blackhole","protocol":%d},"players":{"max":%d,"online":%d,"sample":[]},"description":{"text":"%s"},"favicon":"%s","modinfo":{"type":"FML","modList":[]}}`, protocol, max_players, count, JsonEscape(motd), JsonEscape(favicon)),
 	}
 	player.WritePacket(&response)
 }
