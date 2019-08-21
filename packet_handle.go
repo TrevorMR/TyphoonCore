@@ -652,7 +652,7 @@ func (packet *PacketPlayKeepAlive) Write(player *Player) (err error) {
 func (packet *PacketPlayKeepAlive) Handle(player *Player) {
 	if player.protocol > V1_8 {
 		if player.keepalive != packet.Identifier {
-			player.Kick("Invalid keepalive")
+			//player.Kick("Invalid keepalive")
 		}
 	} else {
 		player.keepalive = packet.Identifier
